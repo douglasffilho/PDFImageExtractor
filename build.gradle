@@ -13,6 +13,12 @@ buildscript {
 
         //Logging
         slf4jVersion = '1.7.5'
+
+        //PDF Services
+        iTextPDFVersion = '5.5.13'
+
+        //Apache Commons
+        apacheCommonsVersion = '2.6'
     }
     repositories {
         mavenCentral()
@@ -63,6 +69,10 @@ dependencies {
 
     compile("org.slf4j:slf4j-api:${slf4jVersion}")
     compile("org.slf4j:slf4j-log4j12:${slf4jVersion}")
+
+    compile("com.itextpdf:itextpdf:${iTextPDFVersion}")
+
+    compile("commons-lang:commons-lang:${apacheCommonsVersion}")
 
     testCompile("junit:junit:${junitVersion}")
     testCompile("org.mockito:mockito-all:${mockitoVersion}")
